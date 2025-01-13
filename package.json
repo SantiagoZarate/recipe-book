@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "api": "pnpm --filter @recipe-book/api",
+    "web": "pnpm --filter @recipe-book/web",
+    "mobile": "pnpm --filter @recipe-book/mobile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
