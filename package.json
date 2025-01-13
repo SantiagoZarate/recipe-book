@@ -7,9 +7,16 @@
     "api": "pnpm --filter @recipe-book/api",
     "web": "pnpm --filter @recipe-book/web",
     "mobile": "pnpm --filter @recipe-book/mobile",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "19.6.1",
+    "@commitlint/config-conventional": "19.6.0",
+    "husky": "9.1.7",
+    "lint-staged": "15.3.0"
+  }
 }
