@@ -1,4 +1,10 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+  Relation,
+} from 'typeorm';
 import { Recipe } from './recipe.entity';
 
 @Entity('recipe_image')
@@ -10,7 +16,7 @@ export class RecipeImage {
     type: 'int',
     nullable: false,
   })
-  order: string;
+  order: number;
 
   @Column({
     type: 'varchar',
@@ -20,5 +26,5 @@ export class RecipeImage {
 
   // RELATIONS
   @ManyToOne(() => Recipe, (recipe) => recipe.images)
-  recipe: Recipe;
+  recipe: Relation<Recipe>;
 }

@@ -38,21 +38,25 @@ export class Recipe {
   @ManyToOne(() => User, (user) => user.recipes)
   user: User;
 
-  @OneToMany(() => RecipeImage, (recipeImage) => recipeImage.recipe)
+  @OneToMany(() => RecipeImage, (recipeImage) => recipeImage.recipe, {
+    cascade: true,
+  })
   images: RecipeImage[];
 
-  @ManyToOne(() => Dish, (dish) => dish.recipes)
+  @ManyToOne(() => Dish, (dish) => dish.recipes, { cascade: true })
   dish: Dish;
 
   @OneToMany(
     () => RecipeToIngredient,
     (recipeToIngredient) => recipeToIngredient.recipe,
+    { cascade: true },
   )
   ingredients: RecipeToIngredient[];
 
   @OneToMany(
     () => RecipeInstruction,
     (recipeInstruction) => recipeInstruction.recipe,
+    { cascade: true },
   )
   instructions: RecipeInstruction[];
 }
