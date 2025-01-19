@@ -19,8 +19,13 @@ export class DishController {
   constructor(private readonly dishService: DishService) {}
 
   @Post()
-  create(@Body() createDishDto: CreateDishDto) {
-    return this.dishService.create(createDishDto);
+  async create(@Body() createDishDto: CreateDishDto) {
+    const result = await this.dishService.create(createDishDto);
+    return new GenericResponse({
+      code: HttpStatus.CREATED,
+      data: result,
+      message: 'dish created succesfully!',
+    });
   }
 
   @Get()

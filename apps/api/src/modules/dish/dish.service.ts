@@ -11,9 +11,10 @@ export class DishService {
     @InjectRepository(Dish) private dishRepository: Repository<Dish>,
   ) {}
 
-  create(createDishDto: CreateDishDto) {
-    console.log(createDishDto);
-    return 'This action adds a new dish';
+  async create(createDishDto: CreateDishDto) {
+    const newDish = this.dishRepository.create(createDishDto);
+    const result = await this.dishRepository.save(newDish);
+    return result;
   }
 
   async findAll() {
