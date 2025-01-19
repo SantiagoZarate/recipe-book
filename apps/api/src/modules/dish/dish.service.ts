@@ -16,14 +16,16 @@ export class DishService {
     return 'This action adds a new dish';
   }
 
-  findAll() {
-    return `This action returns all dish`;
+  async findAll() {
+    const results = await this.dishRepository.find();
+    return results;
   }
 
-  findOne(id: number) {
-    console.log(this.dishRepository);
-
-    return `This action returns a #${id} dish`;
+  async findOne(id: string) {
+    const result = await this.dishRepository.findOneBy({
+      id,
+    });
+    return result;
   }
 
   update(id: number, updateDishDto: UpdateDishDto) {
