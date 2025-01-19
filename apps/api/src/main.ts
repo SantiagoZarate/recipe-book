@@ -1,3 +1,4 @@
+import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
@@ -6,8 +7,11 @@ async function bootstrap() {
 
   app.setGlobalPrefix('/api');
 
-  await app.listen(3000, () => {
-    console.log(`Server up & running at http://localhost:3000/api`);
+  const config = app.get(ConfigService);
+  const port = config.get<number>('PORT');
+
+  await app.listen(port, () => {
+    console.log(`Server up & running at http://localhost:${port}/api`);
   });
 }
 bootstrap();

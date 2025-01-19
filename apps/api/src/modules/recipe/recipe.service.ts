@@ -4,7 +4,7 @@ import { UpdateRecipeDto } from './dto/update-recipe.dto';
 
 @Injectable()
 export class RecipeService {
-  create(createRecipeDto: CreateRecipeDto) {
+  create(_createRecipeDto: CreateRecipeDto) {
     return 'This action adds a new recipe';
   }
 
@@ -16,7 +16,7 @@ export class RecipeService {
     return `This action returns a #${id} recipe`;
   }
 
-  update(id: number, updateRecipeDto: UpdateRecipeDto) {
+  update(id: number, _updateRecipeDto: UpdateRecipeDto) {
     return `This action updates a #${id} recipe`;
   }
 

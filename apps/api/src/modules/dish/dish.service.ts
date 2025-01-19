@@ -21,6 +21,8 @@ export class DishService {
   }
 
   findOne(id: number) {
+    console.log(this.dishRepository);
+
     return `This action returns a #${id} dish`;
   }
 
