@@ -17,7 +17,9 @@ import { ConfigModule } from '../config.module';
           username: configService.get('POSTGRES_USER'),
           password: configService.get('POSTGRES_PASS'),
           database: configService.get('POSTGRES_NAME'),
-          entities: [resolve(__dirname, '..', '/.entity.{ts,js}')],
+          entities: [
+            resolve(__dirname, '..', '..', 'entities', '*.entity.{ts,js}'),
+          ],
           synchronize: process.env.NODE_ENV === 'development',
         };
       },

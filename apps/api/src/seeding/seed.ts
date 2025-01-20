@@ -1,4 +1,4 @@
-import { dbConfig } from 'src/config/dbConfig';
+import { dbConfig } from 'src/config/db/dbConfig';
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { SeederOptions, runSeeders } from 'typeorm-extension';
 import { dishFactory } from './dish.factory';

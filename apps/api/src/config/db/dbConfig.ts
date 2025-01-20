@@ -1,7 +1,7 @@
 import { Dish } from 'src/entities/dish.entity';
 import { Ingredient } from 'src/entities/ingredient.entity';
 import { RecipeImage } from 'src/entities/recipe-image.entity';
-import { RecipeToIngredient } from 'src/entities/recipe-ingredient';
+import { RecipeToIngredient } from 'src/entities/recipe-ingredient.entity';
 import { RecipeInstruction } from 'src/entities/recipe-intruction.entity';
 import { Recipe } from 'src/entities/recipe.entity';
 import { User } from 'src/entities/user.entity';

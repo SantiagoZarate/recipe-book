@@ -8,7 +8,7 @@ import {
 } from 'typeorm';
 import { Dish } from './dish.entity';
 import { RecipeImage } from './recipe-image.entity';
-import { RecipeToIngredient } from './recipe-ingredient';
+import { RecipeToIngredient } from './recipe-ingredient.entity';
 import { RecipeInstruction } from './recipe-intruction.entity';
 import { User } from './user.entity';
 
