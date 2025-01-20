@@ -1,0 +1,14 @@
+{
+  "name": "@recipe-book/api-client",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@recipe-book/api": "workspace:^"
+  }
+}
