@@ -7,5 +7,5 @@ export interface DishAPI {
 }
 
 type GetOneParams = {
-  id: number;
+  id: string;
 };

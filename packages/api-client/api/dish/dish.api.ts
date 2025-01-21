@@ -13,11 +13,11 @@ const dishApi: DishAPI = {
     });
   },
   getOne({ id }) {
-    const url = `${baseUrl}/dish/${id}"`;
+    const url = `${baseUrl}/dish/${id}`;
 
     return fetch(url).then((response) => {
       if (!response.ok) {
-        throw new Error("Error getting all the dishes");
+        throw new Error(`Error getting dish with id ${id}`);
       }
       return response.json();
     });
